@@ -1,6 +1,7 @@
 from random import sample, randint
 
 def random_generator():
+	global buttons
 	rand_generator = sample(range(7, 12), 3)
 	quantity = sample(range(1, 7), 3)
 	expected_goal = randint(50,240)
@@ -10,7 +11,7 @@ def random_generator():
 	for i in range(3):
 		buttons.append(((rand_generator[i] * expected_goal)/(sum(rand_generator)) / quantity[i]))
 
-	return = buttons[0]*quantity[0] + buttons[1]*quantity[1] + buttons[2]*quantity[2]
+	return buttons[0]*quantity[0] + buttons[1]*quantity[1] + buttons[2]*quantity[2]
 
 if __name__ == '__main__':
 	goal = random_generator()
